@@ -1,0 +1,30 @@
+.welcoming {
+    color: #ffffff;
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 1;
+    padding: 20px;
+}
+
+.welcoming #w1 {
+    color: #c6ff98;
+}
+
+.welcoming #w2 {
+    animation: underlineBlink 1250ms infinite;
+}
+
+@keyframes underlineBlink {
+    0% {
+        visibility: hidden;
+    }
+    49% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: initial;
+    }
+    100% {
+        visibility: initial;
+    }
+}

@@ -1,0 +1,15 @@
+.sidenav{
+    width: 1em;
+    margin: 0 auto;
+    margin-top: 25em;
+}
+
+.route{
+    background-color: white;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+}
+button{
+    margin:  1em 0 1em 0;
+}

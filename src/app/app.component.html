@@ -1,0 +1,15 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav class="sidenavContent" mode="side" opened>
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content class="mainContent">
+    <mat-grid-list [cols]="gridSize" (window:resize)="onResize($event)" class="mainGrid" rowHeight="1:1">
+      <mat-grid-tile>
+          <app-info></app-info>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <router-outlet></router-outlet>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-sidenav-content>
+</mat-sidenav-container>

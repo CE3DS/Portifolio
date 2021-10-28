@@ -1,0 +1,9 @@
+.aboutMe{
+    width: 60%;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify:inter-word;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 100;
+}
