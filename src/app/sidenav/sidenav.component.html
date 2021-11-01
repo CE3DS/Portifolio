@@ -1,5 +1,15 @@
-<div class="sidenav">
-    <button *ngFor="let route of routes" mat-mini-fab color="accent" (click)="goToRoute(route)">
-        <mat-icon>menu</mat-icon>
-    </button>
+<div class="colorModeToggle">
+    <mat-slide-toggle [checked]="darkTheme_" (toggleChange)="changeTheme()"></mat-slide-toggle>
+</div>
+
+<div class="routesList" (mouseover)=" expandRouteDesc()" (mouseout)="contractRouteDesc()">
+
+    <div class="route colPrimary" *ngFor="let route of routes" mat-mini-fab (click)="goToRoute(route)">
+        <div>
+            <mat-icon class="icon">menu</mat-icon>
+            <p class="desc">
+                {{route | uppercase | slice:0:15}}
+            </p>
+        </div>
+    </div>
 </div>

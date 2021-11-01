@@ -1,10 +1,10 @@
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 
@@ -22,7 +22,17 @@ export class AppComponent implements OnInit {
     this.gridSize = (event.target.innerWidth <= 1200) ? 1 : 2;
   }
 
-  
+  changeTheme(event: any) {
+    var element = document.getElementsByClassName("mainContainer");
+    if (!event) {
+      element[0].classList.remove("darkTheme");
+      element[0].classList.add("lightTheme");
+    }
+    else {
+      element[0].classList.remove("lightTheme");
+      element[0].classList.add("darkTheme");
+    }
+  }
 }
 
 

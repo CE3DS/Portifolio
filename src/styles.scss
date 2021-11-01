@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+// Dark Theme
+.darkTheme {
+  color: white;
+  background-color: #08080a;
+}
+.darkTheme .colPrimary {
+  background-color: #AA00FF;
+  color: #ffffff;
+}
+.darkTheme .colAccent {
+  background-color: #B2FF59;
+  color: #000000;
+}
+.darkTheme .txtPrimary {
+  color: #AA00FF;
+}
+.darkTheme .txtAccent {
+  color: #B2FF59;
+}
+.darkTheme .background1 {
+  background-color: #121218;
+}
+.darkTheme .background2 {
+  background-color: #08080a;
+}
+.darkTheme .background3 {
+  background-color: #060607;
+}
+
+//Light Theme
+.lightTheme {
+  color: #181717;
+  background-color: #08080a;
+}
+.lightTheme .colPrimary {
+  background-color: #e7eb12;
+  color: #000000;
+}
+.lightTheme .colAccent {
+  background-color: #4c00ff;
+}
+.lightTheme .txtPrimary {
+  color: #e7eb12;
+}
+.lightTheme .txtAccent {
+  color: #4c00ff;
+}
+.lightTheme .background1 {
+  background-color: #ffffff;
+}
+.lightTheme .background2 {
+  background-color: #e7eb12;
+}
+.lightTheme .background3 {
+  background-color: #111111;
+}

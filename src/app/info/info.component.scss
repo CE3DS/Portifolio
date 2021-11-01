@@ -1,20 +1,15 @@
 .welcoming {
-    color: #ffffff;
     font-size: 3em;
     font-weight: 100;
     line-height: 1;
     padding: 20px;
 }
 
-.welcoming #w1 {
-    color: #c6ff98;
+.blink {
+    animation: blink 1250ms infinite;
 }
 
-.welcoming #w2 {
-    animation: underlineBlink 1250ms infinite;
-}
-
-@keyframes underlineBlink {
+@keyframes blink {
     0% {
         visibility: hidden;
     }

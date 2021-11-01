@@ -12,6 +12,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { InfoComponent } from './info/info.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatIconModule,
     MatButtonModule,
     AppRoutingModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
