@@ -9,17 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   public gridSize: any;
-  public routes = ['about-me', 'skills'];
+  public tileClassList: string[] = [];
 
   constructor(private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit(): void {
     this.gridSize = (window.innerWidth <= 1200) ? 1 : 2;
+    window.innerWidth <= 1200 ? this.tileClassList = ['tileRouter'] : this.tileClassList = [];
   }
 
   onResize(event: any) {
     this.gridSize = (event.target.innerWidth <= 1200) ? 1 : 2;
+    event.target.innerWidth <= 1200 ? this.tileClassList = ['tileRouter'] : this.tileClassList = [];
   }
 
   changeTheme(event: any) {

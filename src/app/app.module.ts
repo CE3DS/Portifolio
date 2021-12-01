@@ -13,6 +13,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { InfoComponent } from './info/info.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MyProjectsComponent } from './my-projects/my-projects.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     SkillsComponent,
     InfoComponent,
     SidenavComponent,
+    MyProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatButtonModule,
     AppRoutingModule,
     MatSidenavModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

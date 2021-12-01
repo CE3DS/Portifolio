@@ -1,0 +1,25 @@
+.container {
+    animation: initKey 1s forwards;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: fit-content;
+    width: 60%;
+    text-align: center;
+}
+
+
+@keyframes initKey {
+    0% {
+      transform: translate(50vh, 0);
+      opacity: 0%;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 100%;
+    }
+  }
+  

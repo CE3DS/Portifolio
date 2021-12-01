@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { route } from './route';
 
 @Component({
   selector: 'app-sidenav',
@@ -10,39 +12,40 @@ export class SidenavComponent implements OnInit {
   @Output() darkTheme = new EventEmitter;
 
   darkTheme_: boolean = true;
+  theme: string = "Dark";
 
-  public routes: string[] = ['Sobre Mim', 'Skills', 'Trabalhos', 'Outros'];
+  routeIconClass!: any[];
+  routeListClass!: any[];
 
-  constructor() { }
+  // Icons disponíveis em: https://jossef.github.io/material-design-icons-iconfont/
+  public routes: route[] = [
+    { route: "about-me", description: "Sobre mim", matIcon: "person" },
+    { route: "skills", description: "Skills", matIcon: "auto_awesome" },
+    { route: "my-projects", description: "Meus projetos", matIcon: "backup_table" },
+  ];
 
-  ngOnInit(): void {
-  }
+  constructor(public router: Router) { }
 
-  goToRoute(x: string) {
-    console.log(x)
+  ngOnInit(): void { }
+
+  goToRoute(route: string) {
+    this.router.navigate([route])
   }
 
   changeTheme() {
+    this.theme == "Dark" ? this.theme = "Light" : this.theme = "Dark";
+
     this.darkTheme_ = !this.darkTheme_;
     this.darkTheme.emit(this.darkTheme_);
   }
 
   expandRouteDesc() {
-    console.log('expand')
-    var routeDesc = document.getElementsByClassName("route");
-    for (var desc of routeDesc) {
-      desc.classList.add('expandRouteDesc');
-      desc.classList.remove('contractRouteDesc');
-    }
+    this.routeIconClass = ['expandRouteDesc']
+    this.routeListClass = ['expandRouteDesc']
   }
 
   contractRouteDesc() {
-    console.log('contract')
-    var routeDesc = document.getElementsByClassName("route");
-    for (var desc of routeDesc) {
-      desc.classList.add('contractRouteDesc')
-      desc.classList.remove('expandRouteDesc');
-
-    }
+    this.routeIconClass = ['contractRouteDesc']
+    this.routeListClass = []
   }
 }

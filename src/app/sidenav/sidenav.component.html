@@ -1,15 +1,27 @@
-<div class="colorModeToggle">
-    <mat-slide-toggle [checked]="darkTheme_" (toggleChange)="changeTheme()"></mat-slide-toggle>
-</div>
+<div class="container" (mouseover)="expandRouteDesc()" (mouseout)="contractRouteDesc()">
+    <div class="colorModeToggle">
+        <mat-slide-toggle [checked]="darkTheme_" (toggleChange)="changeTheme()"></mat-slide-toggle>
+        <p class="colorMode">{{theme}} Mode</p>
+    </div>
 
-<div class="routesList" (mouseover)=" expandRouteDesc()" (mouseout)="contractRouteDesc()">
-
-    <div class="route colPrimary" *ngFor="let route of routes" mat-mini-fab (click)="goToRoute(route)">
-        <div>
-            <mat-icon class="icon">menu</mat-icon>
-            <p class="desc">
-                {{route | uppercase | slice:0:15}}
-            </p>
+    <div class="routesList" [ngClass]="routeListClass">
+        <div class="r1 rotateDeco colPrimary"></div>
+        <div class="r2 rotateDeco colPrimary"></div>
+        <div class="r3 rotateDeco colPrimary"></div>
+        <div class="route colPrimary" [ngClass]="routeIconClass" *ngFor="let route of routes" mat-mini-fab
+            (click)="goToRoute(route.route)" [ngStyle]="{
+        'opacity': route.route == this.router.url.substring(1) ? '20%' : '100%',
+        'cursor' : route.route == this.router.url.substring(1) ? 'auto' : 'pointer'
+        }">
+            <div>
+                <mat-icon class="icon">{{route.matIcon}}</mat-icon>
+                <p class="desc">
+                    {{route.description| uppercase | slice:0:15}}
+                </p>
+            </div>
         </div>
+        <div class="r3 rotateDeco colPrimary"></div>
+        <div class="r2 rotateDeco colPrimary"></div>
+        <div class="r1 rotateDeco colPrimary"></div>
     </div>
 </div>

@@ -1,4 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+$light-primary: mat.define-palette(mat.$blue-palette, 500);
+$light-accent: mat.define-palette(mat.$amber-palette, 500);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $light-primary,
+      accent: $light-accent,
+    ),
+  )
+);
+
+$dark-primary: mat.define-palette(mat.$purple-palette, A700);
+$dark-accent: mat.define-palette(mat.$light-green-palette, A200);
+
+$dark-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $dark-primary,
+      accent: $dark-accent,
+    ),
+  )
+);
+
+@include mat.all-component-themes($dark-theme);
+@include mat.button-theme($dark-theme);
+
+.lightTheme {
+  @include mat.all-component-themes($light-theme);
+  @include mat.button-color($light-theme);
+}
+
 html,
 body {
   height: 100%;
@@ -9,59 +45,115 @@ body {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
+// Dark Theme Colors
+$dark-primary: #673AB7;
+$dark-accent: #b2ff59;
+$dark-light: #ffffff;
+$dark-dark: #181717;
+$dark-selection: #4a148c;
+$dark-background1: #272538;
+$dark-background2: #1c1c27;
+$dark-background3: #16161d;
+$dark-background4: #121218;
+$dark-background5: #060607;
+
+
+// Light Theme Colors
+
+$light-primary: #ffc107;
+$light-accent: #2196f3;
+$light-dark: #181717;
+$light-light: #ffffff;
+$light-selection: #369ef4;
+$light-background1: #dad9d5;
+$light-background2: #ffc107;
+$light-background3: #cecece;
+$light-background4: #f8f8f5;
+$light-background5: #111111;
+////////////////////////////////////////////////////
 // Dark Theme
 .darkTheme {
-  color: white;
-  background-color: #08080a;
+  color: $dark-light;
+  background-color: $dark-background2;
+}
+.darkTheme .colInverse{
+  background-color: $dark-light;
+}
+.darkTheme .txtInverse{
+  color: $dark-dark;
+}
+.darkTheme ::selection {
+  background: $dark-selection;
 }
 .darkTheme .colPrimary {
-  background-color: #AA00FF;
-  color: #ffffff;
+  background-color: $dark-primary;
+  color: $dark-light;
 }
 .darkTheme .colAccent {
-  background-color: #B2FF59;
-  color: #000000;
+  background-color: $dark-accent;
+  color: $dark-background2;
 }
 .darkTheme .txtPrimary {
-  color: #AA00FF;
+  color: $dark-primary;
 }
 .darkTheme .txtAccent {
-  color: #B2FF59;
+  color: $dark-accent;
 }
 .darkTheme .background1 {
-  background-color: #121218;
+  background-color: $dark-background1;
 }
 .darkTheme .background2 {
-  background-color: #08080a;
+  background-color: $dark-background2;
 }
 .darkTheme .background3 {
-  background-color: #060607;
+  background-color: $dark-background3;
+}
+.darkTheme .background4 {
+  background-color: $dark-background4;
+}
+.darkTheme .background5 {
+  background-color: $dark-background5;
 }
 
 //Light Theme
 .lightTheme {
-  color: #181717;
-  background-color: #08080a;
+  color: $light-dark;
+  background-color: $light-background3;
+}
+.lightTheme .colInverse{
+  background-color: $light-dark;
+}
+.lightTheme .txtInverse{
+  color: $light-light;
+}
+.lightTheme ::selection {
+  background: $light-selection;
 }
 .lightTheme .colPrimary {
-  background-color: #e7eb12;
-  color: #000000;
+  background-color: $light-primary;
+  color: $light-dark;
 }
 .lightTheme .colAccent {
-  background-color: #4c00ff;
+  background-color: $light-accent;
 }
 .lightTheme .txtPrimary {
-  color: #e7eb12;
+  color: $light-primary;
 }
 .lightTheme .txtAccent {
-  color: #4c00ff;
+  color: $light-accent;
 }
 .lightTheme .background1 {
-  background-color: #ffffff;
+  background-color: $light-background1;
 }
 .lightTheme .background2 {
-  background-color: #e7eb12;
+  background-color: $light-background2;
 }
 .lightTheme .background3 {
-  background-color: #111111;
+  background-color: $light-background3;
+}
+.lightTheme .background4 {
+  background-color: $light-background4;
+}
+.lightTheme .background5 {
+  background-color: $light-background5;
 }
