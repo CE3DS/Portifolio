@@ -14,6 +14,8 @@ import { InfoComponent } from './info/info.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { MyProjectsComponent } from './my-projects/my-projects.component';
     InfoComponent,
     SidenavComponent,
     MyProjectsComponent,
+    ContactComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

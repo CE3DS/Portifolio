@@ -1,0 +1,30 @@
+.container {
+    animation: initKey 2s forwards;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60%;
+    height: fit-content;
+  
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 100;
+  
+    @keyframes initKey {
+      0% {
+        transform: translate(50vh, 0);
+        opacity: 0%;
+      }
+  
+      100% {
+        transform: translate(0, 0);
+        opacity: 100%;
+      }
+    }
+  }

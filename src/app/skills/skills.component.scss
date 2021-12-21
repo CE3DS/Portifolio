@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
 
-  animation: initKey 1s forwards;
+  animation: initKey 2s forwards;
 
   margin: auto;
   max-height: 72%;
@@ -25,18 +25,6 @@
   }
 }
 
-.main {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  margin-top: 3em;
-  height: 100%;
-  width: 100%;
-}
-
 .desc {
   h1 {
     font-weight: 400;
@@ -48,18 +36,17 @@
 
 .skill {
   text-align: center;
-  font-size: 100%;
 
   img {
     height: auto;
-    width: 50%;
+    width: 6vh;
   }
 
   :hover {
     font-weight: 500;
     img {
       height: auto;
-      width: 70%;
+      width: 8vh;
     }
   }
 }

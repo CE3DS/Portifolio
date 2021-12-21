@@ -1,5 +1,4 @@
 <div class="container" [ngClass]="containerClass">
-    <div class="main">
         <div class="desc">
             <h1 class="colAccent">SKILLS</h1>
         </div>
@@ -8,7 +7,7 @@
         </div>
         <br><br><br><br>
 
-        <mat-grid-list [cols]="gridCols" rowHeight="1:1.5" (window:resize)="onResize($event)">
+        <mat-grid-list [cols]="gridCols" rowHeight="1:1.6" (window:resize)="onResize($event)">
             <mat-grid-tile class="skill">
                 <div>
                     <img src="assets\skillsLogos\typescript.png"><br>
@@ -70,32 +69,4 @@
                 </div>
             </mat-grid-tile>
         </mat-grid-list>
-    </div>
 </div>
-
-
-
-<!-- <h1 class="colAccent">FRONT END</h1>
-            <h2 class="colPrimary">Linguagens</h2>
-            <h3>
-                HTML<br>
-                CSS<br>
-                Javascript<br>
-                Typescript<br>
-            </h3>
-            <h2 class="colPrimary">Frameworks</h2>
-            <h3>
-                Angular<br>
-                Angular Material<br>
-                Angular Bootstrap<br>
-            </h3>
-
-            <h1 class="colAccent">BACK END</h1>
-            <h2 class="colPrimary">Linguagens</h2>
-            <h3>
-                C#<br>
-            </h3>
-            <h2 class="colPrimary">Frameworks</h2>
-            <h3>
-                ASP.NET<br>
-            </h3> -->

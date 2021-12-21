@@ -49,7 +49,7 @@ body {
 $dark-primary: #673AB7;
 $dark-accent: #b2ff59;
 $dark-light: #ffffff;
-$dark-dark: #181717;
+$dark-dark: #060607;
 $dark-selection: #4a148c;
 $dark-background1: #272538;
 $dark-background2: #1c1c27;
@@ -60,24 +60,33 @@ $dark-background5: #060607;
 
 // Light Theme Colors
 
-$light-primary: #ffc107;
-$light-accent: #2196f3;
-$light-dark: #181717;
+$light-primary: #ffffff;
+$light-accent: #673AB7;
+$light-dark: #060607;
 $light-light: #ffffff;
-$light-selection: #369ef4;
-$light-background1: #dad9d5;
-$light-background2: #ffc107;
+$light-selection: #673AB7;
+$light-background1: #e6e6e6;
+$light-background2: #673AB7;
 $light-background3: #cecece;
-$light-background4: #f8f8f5;
-$light-background5: #111111;
+$light-background4: #ffffff;
+$light-background5: #5423a8;
 ////////////////////////////////////////////////////
 // Dark Theme
 .darkTheme {
   color: $dark-light;
   background-color: $dark-background2;
 }
+.darkTheme .colTheme{
+  background-color: $dark-dark;
+  columns: $dark-light;
+}
+.darkTheme .transparentTheme{
+  background-color: #000000b4;
+  columns: $dark-light;
+}
 .darkTheme .colInverse{
   background-color: $dark-light;
+  columns: $dark-dark;
 }
 .darkTheme .txtInverse{
   color: $dark-dark;
@@ -120,8 +129,17 @@ $light-background5: #111111;
   color: $light-dark;
   background-color: $light-background3;
 }
+.lightTheme .colTheme{
+  background-color: $light-light;
+  color: $light-dark;
+}
+.lightTheme .transparentTheme{
+  background-color: #ffffffb4;
+  color: $light-dark;
+}
 .lightTheme .colInverse{
   background-color: $light-dark;
+  columns: $light-light;
 }
 .lightTheme .txtInverse{
   color: $light-light;
@@ -135,6 +153,7 @@ $light-background5: #111111;
 }
 .lightTheme .colAccent {
   background-color: $light-accent;
+  color: $light-primary;
 }
 .lightTheme .txtPrimary {
   color: $light-primary;
@@ -155,5 +174,8 @@ $light-background5: #111111;
   background-color: $light-background4;
 }
 .lightTheme .background5 {
+  background-color: $light-background5;
+}
+.lightTheme .backgroundInverseTransparent {
   background-color: $light-background5;
 }

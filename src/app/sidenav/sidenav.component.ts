@@ -22,6 +22,7 @@ export class SidenavComponent implements OnInit {
     { route: "about-me", description: "Sobre mim", matIcon: "person" },
     { route: "skills", description: "Skills", matIcon: "auto_awesome" },
     { route: "my-projects", description: "Meus projetos", matIcon: "backup_table" },
+    { route: "contact", description: "Contato", matIcon: "contact_mail" },
   ];
 
   constructor(public router: Router) { }
