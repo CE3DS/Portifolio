@@ -1,4 +1,4 @@
-# Portifolio
+# Portfolio
 
 URL: https://ce3ds.github.io/about-me
 
